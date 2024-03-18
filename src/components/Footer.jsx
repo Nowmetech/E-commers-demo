@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+Link
 const title = "About ShopCart";
 const desc = "Eduaid theme number one world class university in the world There are student are studing always in this university for all time.";
 const ItemTitle = "Categories";
@@ -133,10 +135,10 @@ const footerbottomList = [
 ]
 function Footer() {
   return (
-   <Footer className='style-2' >
+   <footer className='style-2' >
     <div className='footer-top dark-view padding-tb'>
         <div className='container'>
-            <div className='row'>
+            <div className='row g-4 row-cols-xl-4 row-cols-sm-2 row-cols-1justify-content-center align-item-center  '>
                 <div className="col">
                     <div className="footer-item our-address">
                         <div className='footer-inner'>
@@ -144,7 +146,111 @@ function Footer() {
                                 <div className="title">
                                     <h4>{title}</h4>
                                 </div>
+                                <div className='content'>
+                                    <p>{desc}</p>
+                                    <ul className='lab-ul office-address'>
+                                       {
+                                        addressList.map((item, index) => (
+                                            <li key={index}>
+                                                <i className={item.iconName}>
+                                                {item.text}</i>
+                                            
+                                            </li>
+                                        ))
+                                       }
+                                    </ul>
+                                   {/* social list */}
+                                    <ul className='lab-ul social-icons'>
+                                {
+                                             socialList.map((item, index) => (
+                                            <li key={index}>
+                                               <a href='#' className={item.className}>
+                                               <i className={item.iconName}>
+                                                {item.text}</i>
+                                                </a>                                             
+                                            </li>
+                                        ))
+                                       }
+                                    </ul>
+                                </div>
+                                
                             </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div className="col">
+                    <div className="footer-item our-address">
+                        <div className='footer-inner'>
+                            <div className="footer-content">
+                                <div className="title">
+                                    <h4>{ItemTitle }</h4>
+                                </div>
+                                <div className='content'>
+                                    
+                                    <ul className='lab-ul office-address'>
+                                       {
+                                        ItemList.map((item, index) => (
+                                            <li key={index}>
+                                               <a href="" className={item.link}> {item.text}</a>
+                                            
+                                            </li>
+                                        ))
+                                       }
+                                    </ul>                         
+                                
+                                </div>                                
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div className="col">
+                    <div className="footer-item our-address">
+                        <div className='footer-inner'>
+                            <div className="footer-content">
+                                <div className="title">
+                                    <h4>{quickTitle }</h4>
+                                </div>
+                                <div className='content'>
+                                    
+                                    <ul className='lab-ul office-address'>
+                                       {
+                                        quickList.map((item, index) => (
+                                            <li key={index}>
+                                               <a href="" className={item.link}> {item.text}</a>
+                                            
+                                            </li>
+                                        ))
+                                       }
+                                    </ul>                         
+                                
+                                </div>                                
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <div className="col">
+                    <div className="footer-item our-address">
+                        <div className='footer-inner'>
+                            <div className="footer-content">
+                                <div className="title">
+                                    <h4>{tweetTitle }</h4>
+                                </div>
+                                <div className='content'>
+                                    
+                                    <ul className='lab-ul office-address'>
+                                       {
+                                        tweetList.map((item, index) => (
+                                            <li key={index}>
+                                              <i className={item.iconName}></i> 
+                                              {item.desc}
+                                            </li>
+                                        ))
+                                       }
+                                    </ul>                         
+                                
+                                </div>                                
+                            </div>                            
                         </div>
                     </div>
                 </div>
@@ -152,7 +258,22 @@ function Footer() {
 
         </div>
     </div>
-   </Footer>
+    {/* buttom  */}
+    <div className='footer-bottom'>
+        <div className='container'>
+            <div className='section-wrapper'>
+                <p> &copy; 2023 <Link to='/'>Shop cart</Link> Designed by <a href="https://github.com/Nowme10" target='_blank'>Amitavo Banerjee</a></p>
+                <div className='footer-bottom-list'>
+                    {
+                        footerbottomList.map((item, index) =>(
+                            <Link to={item.link} key={index}>{item.text}</Link>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+   </footer>
   )
 }
 

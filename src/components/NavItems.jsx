@@ -47,7 +47,7 @@ function NavItems() {
             {/* manu area  */}
             <div className='menu-area '>
                     <div className='menu'>
-                        <ul  className={`lab-ul ${menuToggle ? "active": ""}`}>
+                        <ul  className={`lab-ul ${menuToggle ? "active": " "}`}>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/shop ">Shop</Link></li>
                             <li><Link to="/blog">Blog</Link></li>
@@ -66,7 +66,7 @@ function NavItems() {
                             <span></span>
                         </div>
                         <div  className="ellepsis-bar d-md-none " onClick={()=>setSocialToggle(!socialToggle)}>
-                        <i className="icofont-info-square "></i>
+                        <i className="icofont-info-square ">  </i>
                         </div>
 
                 </div>

@@ -5,6 +5,9 @@ import './index.css'
 import 'swiper/css';
 import Home from './home/Home.jsx';
 import Blog from './blog/Blog.jsx';
+import Shop from './shop-page/Shop.jsx';
+import About from './about/About.jsx';
+import SingleProductPage from './shop-page/SingleProductPage.jsx';
 
 // bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,6 +23,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +36,18 @@ const router = createBrowserRouter([
       {
         path:"/blog",
         element :<Blog/>
+       },
+       {
+        path:"/shop",
+        element :<Shop/>
+       },
+       {
+        path:"shop/:id",
+        element :<SingleProductPage/>
+       },
+       {
+        path:"/about",
+        element :<About/>
        }
     ]
   },

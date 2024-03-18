@@ -1,6 +1,6 @@
 import React from 'react'
 import logo1 from '../assets/images/app/01.jpg'
-import logo2 from '../assets/images/app/01.jpg'
+import logo2 from '../assets/images/app/02.jpg'
 import { Link } from 'react-router-dom'
 const btnText = "Sign up for free"
 const title = "Shop anytime, anywhere"

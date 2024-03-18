@@ -1,12 +1,11 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
-
-function Blog() {
+function About() {
   return (
     <div>
-      <PageHeader title='Our Blog Page' currentPage='Blog'/>
+        <PageHeader title="Our About Page" currentPage='About'/>
     </div>
   )
 }
 
-export default Blog
+export default About
